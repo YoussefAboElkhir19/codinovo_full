@@ -32,6 +32,7 @@ export function initWhatsApp() {
     if (readyResolve) readyResolve(true);
   });
 
+
   waClient.on('auth_failure', (msg) => console.error('WA auth failure:', msg));
   waClient.on('disconnected', (reason) => {
     console.warn('WA disconnected:', reason);
